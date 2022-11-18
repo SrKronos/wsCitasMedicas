@@ -22,56 +22,28 @@
       <div class="contenedorcarrusel">
         <!-- INICIO CARRUSEL -->
         <div class="carusel-container">
-          <img src="" alt="imagen_muestra" class="fade">
+          <img src="img/1.jpg" alt="imagen_muestra" class=""> <!--agregar la clase fade-->
         </div>
         <!-- FIN CARRUSEL -->
       </div>
       <div class="contenedorturnos" style="margin-top: -25px;">
-        <div class="panelcitas animate">
+        <div class="panelcitas ">
           <!-- INICIO PANEL DOCTORES -->
-          <div *ngFor="let persona of listaDoctores;" class="contenedordoctores" [style.--numeroitems]="numeroitem">
-            <div class="tarjetadoctor" [ngClass]="{ animar: listaDoctores.lenth > 5}">
-              <div>
-                <div class="">
-                  <div class="flex items-center">
-                    <div class="">
-                      <img class="h-12 w-12 rounded-full"
-                        src="img/doctor.jpg"
-                        alt="">
-                    </div>
-                    <div class="ml-2">
-                      <h3 class="text-lg font-semibold leading-6 text-black-900">{{persona.doctor}}</h3>
-                      <p class="text-sm text-gray-500">
-                        <a href="#">{{persona.especialidad}}</a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
+          <div class="contenedordoctores">
+            <div class="tarjetadoctor" > <!--se agrega la clase animar si pasa de 6-->
+              <div class="ico-doc">
+                <img src="img/doctor.jpg" alt="">
               </div>
-              <!-- INICIO AREA DE PACIENTES -->
-              <div class="filapaciente">
-                <div class="listapacientes">
-                  <div class="filapersona" *ngFor="let persona of listaPacientes;">
-                    <span class="campopersona">
-                      {{persona.paciente}}
-                    </span>
-                    <span class="contenedortiempo">
-                      <div class="campoicono">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                          stroke="currentColor" class="w-6 h-6">
-                          <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </div>
-                      &nbsp;
-                      <span class="campopersona">
-                        {{ persona.reserva_desde | date:'hh:mm' }} - {{ persona.reserva_desde | date:'hh:mm' }}
-                      </span>
-                    </span>
-                  </div>
-                </div>
+              <div class="info-doc">
+                <div class="cnombredoctor">DR. LUCA WILLIAM LOOR POZLIGUA</div>
+                <div class="cespecialidad">ODONTOLOGIA</div>
               </div>
-              <!-- FIN AREA DE PACIENTES -->
+            </div>
+            <div class="filapaciente">
+                <div class="cnombrepaciente">JUAN EUCLIDES ZAMBRANO ALCIVAR</div>
+                <div class="fechacita">
+                  08:00 - 08-30
+                </div>
             </div>
           </div>
           <!-- FIN PANEL DOCTORES-->
@@ -79,8 +51,8 @@
       </div>
     </div>
     <div class="reloj">
-      <p>{{now|date:'EEEE'}}, {{now|date:'d'}} de {{now|date:'MMMM'}} del {{now|date:'YYYY'}} &nbsp;
-        {{now|date:'hh:mm:ss'}}
+      <p>
+        Viernes, 18 de Noviembre del 2022
       </p>
     </div>
   </div>
