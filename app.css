@@ -1,0 +1,28 @@
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.contenedor .contenedorcarrusel{
+    width: 50%;
+}
+
+.contenedor .contenedorturnos{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.reloj{
+    background-color: rgba(255, 255, 255, 0.411);
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    color: black;
+    padding: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
